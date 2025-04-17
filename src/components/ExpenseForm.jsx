@@ -34,62 +34,47 @@ export const ExpenseForm = ({ onAddExpense }) => {
       <h2>Add Expense</h2>
       <p>Enter your expense details below</p>
       <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            placeholder="Enter expense name"
-          />
-        </label>
-        <br />
-        <label>
-         <input
-            type="text"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            placeholder="Enter expense description"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            placeholder="Enter expense category"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="number"
-            name="amount"
-            value={formData.amount}
-            onChange={handleChange}
-            required
-            placeholder="Enter amount"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            placeholder="Enter date"
-          />
-        </label>
-        
-
-  </form>
-</div>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          placeholder="Enter expense name"
+        />
+        <input
+          type="text"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          placeholder="Enter expense description"
+        />
+        <input
+          type="text"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+          placeholder="Enter expense category"
+        />
+        <input
+          type="number"
+          name="amount"
+          value={formData.amount}
+          onChange={handleChange}
+          required
+          placeholder="Enter amount"
+        />
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit" className="submit-button">Submit</button>
+      </form>
+    </div>
   );
-}
+};
 
 export default ExpenseForm;
